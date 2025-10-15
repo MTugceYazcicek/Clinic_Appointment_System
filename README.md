@@ -37,5 +37,19 @@ Kullanıcılar hasta veya doktor olarak kayıt olabilir, giriş yapabilir ve ran
 git clone https://github.com/<kullanici-adin>/<repo-adi>.git
 cd <repo-adi>
 ```
+---
+### 2 Paketleri indir
+```bash
+npm install
+```
+---
+### env düzenle
+```bash
+DB_USER=your_db_username
+DB_PASSWORD=your_db_password
+DB_SERVER=your_server_address
+DB_DATABASE=your_database_name
 
-
+SESSION_SECRET=your_secret_session_key
+PORT=****
+```
