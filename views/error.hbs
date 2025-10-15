@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hata</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Klinik Randevu Sistemi</h1>
+        {{#if user}}
+        <a href="/" class="btn">Ana Sayfa</a>
+        {{/if}}
+    </header>
+    
+    <main>
+        <div class="error-message">
+            <h2>{{message}}</h2>
+            <p>Lütfen ana sayfaya dönüp tekrar deneyin.</p>
+            <a href="/" class="btn">Ana Sayfa</a>
+        </div>
+    </main>
+</body>
+</html>

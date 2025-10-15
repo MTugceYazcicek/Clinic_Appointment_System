@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if isDoctorView}}Doktor Randevuları{{else}}Randevularım{{/if}}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>{{#if isDoctorView}}Doktor Randevuları{{else}}Randevularım{{/if}}</h1>
+        <a href="/" class="btn">Ana Sayfa</a>
+    </header>
+    
+    <main>
+        {{#if appointments.length}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarih ve Saat</th>
+                    {{#if isDoctorView}}
+                    <th>Hasta Adı</th>
+                    {{else}}
+                    <th>Doktor Adı</th>
+                    <th>Uzmanlık</th>
+                    {{/if}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each appointments}}
+                <tr>
+                    <td>{{formatDateTime this.appointment_date}}</td>
+                    {{#if ../isDoctorView}}
+                    <td>{{this.patient_name}}</td>
+                    {{else}}
+                    <td>{{this.doctor_name}}</td>
+                    <td>{{this.specialty}}</td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>Henüz randevu bulunmamaktadır.</p>
+        {{/if}}
+    </main>
+</body>
+</html>
