@@ -1,5 +1,3 @@
-# Clinic_Appointment_System
-Clinic_Appointment_System
 # 🏥 Appointment Management System (Node.js + MSSQL)
 
 Bu proje, **doktor-randevu yönetim sistemi** örneği olarak geliştirilmiştir.  
